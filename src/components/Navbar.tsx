@@ -61,8 +61,8 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2 group">
-              <div className="p-1.5 bg-primary/10 rounded-lg border border-primary/20 group-hover:scale-110 transition-transform">
-                <Brain className="w-8 h-8 text-primary" />
+              <div className="p-1.5 bg-primary/10 rounded-lg border border-primary/20 group-hover:scale-110 transition-transform flex items-center justify-center overflow-hidden w-10 h-10">
+                <img src="/Devloper.jpg" alt="Logo" className="w-full h-full object-cover" onError={(e) => (e.currentTarget.src = "/logo.png")} />
               </div>
               <span className="text-2xl font-bold tracking-tight text-slate-900 dark:text-white">CivicMind <span className="text-primary">AI</span></span>
             </Link>
