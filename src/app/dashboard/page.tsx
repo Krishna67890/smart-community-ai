@@ -259,7 +259,7 @@ const Dashboard = () => {
             <div className="relative w-full h-[350px] bg-dark/50 rounded-xl overflow-hidden border border-white/10">
                {/* Map Background Layer */}
                <div className="absolute inset-0 opacity-40 group-hover:opacity-60 transition-opacity">
-                 <div className="absolute inset-0 bg-[url('/map-placeholder.jpg')] bg-cover" />
+                 <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-purple-500/10" />
                  <div className="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-transparent" />
                </div>
 
