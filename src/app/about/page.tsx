@@ -22,7 +22,7 @@ const AboutPage = () => {
 
   const startTour = () => {
     setHoverVoiceEnabled(true);
-    const tourText = "Welcome to CivicMind AI, a flagship project for the Gen AI Academy APAC Edition. I am your neural guide. Our platform is built by Neural Networks, a team of AI innovators building intelligent, cloud-powered solutions that create smarter communities and improve everyday life. We bridge the gap between complex urban data and community well-being using Google Cloud's advanced ecosystem, including Gemini AI and Vertex AI. Meet our visionaries: Priyanka, Geeth, and Tushar, who together with Krishna Patil Rajput, are architecting the future of smart cities.";
+    const tourText = "Welcome to CivicMind AI, a flagship project for the Gen AI Academy APAC Edition. I am your neural guide. Our platform is built by Neural Networks, a team of AI innovators building intelligent, cloud-powered solutions that create smarter communities and improve everyday life. We bridge the gap between complex urban data and community well-being using Google Cloud's advanced ecosystem, including Gemini AI and Vertex AI. Meet our visionaries: Priyanka, Geeth, and Mounika, who together with Krishna Patil Rajput, are architecting the future of smart cities.";
     speak(tourText, true);
   };
 
@@ -119,9 +119,26 @@ const AboutPage = () => {
                 <p className="text-slate-800 dark:text-gray-200 text-lg leading-relaxed mb-6 font-medium">
                   Build an AI-powered Decision Intelligence Platform that leverages data, AI models, and intelligent automation to help individuals, communities, organizations, and city stakeholders analyze information, generate insights, predict outcomes, and make better decisions that improve everyday life and community well-being.
                 </p>
-                <p className="text-slate-600 dark:text-gray-400 leading-relaxed">
-                  Modern communities generate large volumes of structured and unstructured data from sources such as public services, transportation systems, environmental monitoring, healthcare systems, and citizen feedback. However, transforming this information into actionable insights remains a significant challenge.
-                </p>
+                <div className="space-y-4">
+                  <div className="flex gap-4">
+                    <div className="w-1 h-auto bg-red-500 rounded-full" />
+                    <p className="text-sm text-slate-600 dark:text-gray-400">
+                      <strong>The "Siloed Multimodal" Challenge:</strong> Urban data isn't just numbers; it's unorganized PDFs, chaotic audio, dashcam footage, and sensor streams. Traditional platforms cannot cross-analyze these formats simultaneously.
+                    </p>
+                  </div>
+                  <div className="flex gap-4">
+                    <div className="w-1 h-auto bg-blue-500 rounded-full" />
+                    <p className="text-sm text-slate-600 dark:text-gray-400">
+                      <strong>The "Insight-to-Action" Gap:</strong> Most dashboards only visualize data but fail to automatically orchestrate or execute cross-department workflows to resolve the identified issues.
+                    </p>
+                  </div>
+                  <div className="flex gap-4">
+                    <div className="w-1 h-auto bg-purple-500 rounded-full" />
+                    <p className="text-sm text-slate-600 dark:text-gray-400">
+                      <strong>The Algorithmic Trust Deficit:</strong> Stakeholders hesitate to trust AI "black boxes." We provide transparency and justification for critical civic resource allocations.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -275,9 +292,9 @@ const AboutPage = () => {
                 links: { github: "#", linkedin: "#", twitter: "#" }
               },
               {
-                name: "Tushar Butoliya",
+                name: "Ummadisetti Mounika",
                 role: "UI/UX Designer",
-                image: "/boy.png",
+                image: "/girl.png",
                 logo: <Zap className="w-5 h-5 text-yellow-500" />,
                 bio: "Crafting intuitive, glassmorphic interfaces for complex data visualization.",
                 color: "from-yellow-500",

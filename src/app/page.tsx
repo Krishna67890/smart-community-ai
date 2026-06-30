@@ -16,7 +16,12 @@ import {
   Zap,
   CheckCircle2,
   Database,
-  Volume2
+  Volume2,
+  Video,
+  Activity,
+  SearchCode,
+  Eye,
+  Workflow
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -29,40 +34,40 @@ const stats = [
 
 const features = [
   {
-    title: "AI Decision Assistant",
-    description: "Ask questions in natural language using Gemini AI for real-time insights.",
-    icon: Brain,
+    title: "Multimodal Emergency Pipeline",
+    description: "Real-time incident reporting via video/audio. Gemini analyzes chaos to trigger instant SMS alerts.",
+    icon: Video,
+    color: "text-red-500"
+  },
+  {
+    title: "Agentic Workflow Automation",
+    description: "Autonomous agents that draft work orders and estimate budgets when flaws are detected.",
+    icon: Workflow,
     color: "text-blue-500"
   },
   {
+    title: "Regulatory RAG 'Diff' Tool",
+    description: "Cross-reference new zoning laws against federal guidelines using AlloyDB & Vector Search.",
+    icon: SearchCode,
+    color: "text-orange-500"
+  },
+  {
+    title: "Explainable AI (XAI)",
+    description: "Transparency layer showing feature attributions for every predictive score and decision.",
+    icon: Eye,
+    color: "text-purple-500"
+  },
+  {
     title: "Predictive Analytics",
-    description: "Forecast traffic, pollution, diseases, and public safety risks with high precision.",
+    description: "Forecast traffic, pollution, and public safety risks with Vertex AI precision.",
     icon: LineChart,
     color: "text-green-500"
   },
   {
     title: "Computer Vision",
-    description: "Automated detection of potholes, garbage, and infrastructure damage from images.",
+    description: "Automated detection of infrastructure damage from live feeds and citizen dashcams.",
     icon: Camera,
-    color: "text-purple-500"
-  },
-  {
-    title: "RAG Knowledge Search",
-    description: "Query government reports and policies using advanced retrieval augmentation.",
-    icon: FileSearch,
-    color: "text-orange-500"
-  },
-  {
-    title: "Recommendation Engine",
-    description: "Optimal placement suggestions for schools, hospitals, and EV stations.",
-    icon: MapPin,
-    color: "text-red-500"
-  },
-  {
-    title: "Real-Time Alerts",
-    description: "Instant notifications for floods, traffic jams, and emergency situations.",
-    icon: Bell,
-    color: "text-yellow-500"
+    color: "text-cyan-500"
   }
 ];
 
@@ -288,6 +293,53 @@ const Home = () => {
         </div>
       </section>
 
+      <section className="py-24 bg-gradient-to-b from-transparent to-primary/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4">System Architecture</h2>
+            <p className="text-gray-400 max-w-2xl mx-auto">
+              A high-performance, cloud-native pipeline designed for real-time urban intelligence.
+            </p>
+          </div>
+
+          <div className="relative">
+            <div className="hidden lg:block absolute top-1/2 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-primary/30 to-transparent -z-10" />
+
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
+              {[
+                { step: "01", name: "Data Ingestion", desc: "IoT Sensors, Video Feeds, PDFs", icon: Database },
+                { step: "02", name: "BigQuery ML", desc: "Data Warehouse & Analytics", icon: Activity },
+                { step: "03", name: "Vertex AI", desc: "Gemini Multimodal Models", icon: Brain },
+                { step: "04", name: "Cloud Run", desc: "Serverless Execution Layer", icon: Zap },
+                { step: "05", name: "Frontend", desc: "Interactive Urban Dashboard", icon: Play }
+              ].map((item, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                  className="glass-card p-6 text-center relative group"
+                >
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-primary flex items-center justify-center text-xs font-bold">
+                    {item.step}
+                  </div>
+                  <div className="mb-4 flex justify-center">
+                    <item.icon className="w-10 h-10 text-primary group-hover:scale-110 transition-transform" />
+                  </div>
+                  <h4 className="font-bold mb-2">{item.name}</h4>
+                  <p className="text-xs text-gray-500">{item.desc}</p>
+                  {index < 4 && (
+                    <div className="hidden lg:block absolute top-1/2 -right-4 translate-x-1/2 z-20">
+                      <ArrowRight className="w-4 h-4 text-primary/50" />
+                    </div>
+                  )}
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="pricing" className="py-24 bg-black/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
@@ -366,7 +418,7 @@ const Home = () => {
                  { name: "Krishna Patil Rajput", role: "Lead Dev", color: "from-blue-500", image: "/Devloper.jpg" },
                  { name: "Priyanka Jain", role: "AI Researcher", color: "from-purple-500", image: "/girl.png" },
                  { name: "Geeth Sahith Munagala", role: "Data Scientist", color: "from-green-500", image: "/boy.png" },
-                 { name: "Tushar Butoliya", role: "UI Designer", color: "from-yellow-500", image: "/boy.png" }
+                 { name: "Ummadisetti Mounika", role: "UI Designer", color: "from-yellow-500", image: "/girl.png" }
                ].map((member, i) => (
                  <motion.div
                    key={i}
